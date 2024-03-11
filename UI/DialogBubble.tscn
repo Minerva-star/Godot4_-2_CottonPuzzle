@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/DialogBubble_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/UI/对话框把手.png" type="Texture" id=2]
+[ext_resource path="res://assets/UI/对话框点9图.9.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 143, 132 )
+margin_left = 31.284
+margin_right = 28.44
+margin_top = 28.44
+margin_bottom = 29.0088
+
+[node name="DialogBubble" type="Control"]
+
+[node name="Content" type="Label" parent="."]
+margin_left = 22.0
+margin_bottom = -20.0
+grow_vertical = 0
+rect_min_size = Vector2( 560, 0 )
+custom_colors/font_color = Color( 0.2, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "你好刷修也只是会刷新他的文本，为什么会直接禁用了呢"
+autowrap = true
+
+[node name="Handle" type="TextureRect" parent="."]
+grow_vertical = 0
+texture = ExtResource( 2 )
+flip_h = true
